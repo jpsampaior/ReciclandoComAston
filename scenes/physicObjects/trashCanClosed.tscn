@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/physicObjects/physicObject2.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 5.33333 )
+
+[node name="trashCanClosed" instance=ExtResource( 1 )]
+scale = Vector2( 0.75, 0.75 )
+
+[node name="Sprite" parent="." index="0"]
+position = Vector2( 0, 8 )
+region_enabled = true
+region_rect = Rect2( 37, 288, 23, 26 )
+
+[node name="ObjectCollision" parent="." index="1"]
+position = Vector2( 0, 13.3333 )
+shape = SubResource( 1 )

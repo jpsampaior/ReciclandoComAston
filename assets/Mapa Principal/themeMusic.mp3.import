@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/themeMusic.mp3-b71478680a1c233b0e0de41dfcb0bed6.mp3str"
+
+[deps]
+
+source_file="res://assets/Mapa Principal/themeMusic.mp3"
+dest_files=[ "res://.import/themeMusic.mp3-b71478680a1c233b0e0de41dfcb0bed6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

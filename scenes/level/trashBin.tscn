@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Desafio/trashbin.png" type="Texture" id=1]
+[ext_resource path="res://scripts/level/trashBin.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 31, 31.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 31, 6 )
+
+[node name="Trashbin" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 1 )
+disabled = true
+one_way_collision_margin = 0.0
+
+[node name="Boca" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boca"]
+position = Vector2( 0, -22 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="Boca" to="." method="_on_Boca_body_entered"]

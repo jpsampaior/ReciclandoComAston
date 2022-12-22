@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Tutorial/godot.windows.opt.tools.64_xpeAKmeMau.png" type="Texture" id=1]
+[ext_resource path="res://assets/Tutorial/godot.windows.opt.tools.64_AOCQQjDWRu.png" type="Texture" id=2]
+[ext_resource path="res://assets/Tutorial/godot.windows.opt.tools.64_BeOJXsr1oo.png" type="Texture" id=3]
+[ext_resource path="res://scripts/Tutorial/Tutorial.gd" type="Script" id=4]
+[ext_resource path="res://assets/PressStart2P.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 5 )
+
+[node name="Tutorial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="TutorialPreview" type="Sprite" parent="."]
+position = Vector2( 192, 96 )
+scale = Vector2( 0.333333, 0.333333 )
+texture = ExtResource( 1 )
+
+[node name="Grey2" type="Sprite" parent="."]
+position = Vector2( 239, 62 )
+scale = Vector2( 0.652344, 2.06122 )
+texture = ExtResource( 2 )
+offset = Vector2( 85.0778, -2.66832 )
+
+[node name="Grey" type="Sprite" parent="."]
+position = Vector2( 41.3833, 114.774 )
+scale = Vector2( 0.847656, 0.470195 )
+texture = ExtResource( 2 )
+offset = Vector2( 85.0778, -2.66832 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 164.0
+margin_top = 74.0
+margin_right = 380.0
+margin_bottom = 93.0
+rect_pivot_offset = Vector2( 54, 10 )
+custom_fonts/font = SubResource( 1 )
+text = "...inclinando seu controle,
+colete os tipos corretos..."
+
+[node name="LevelPreview" type="Sprite" parent="Label"]
+position = Vector2( 128, -34.5 )
+scale = Vector2( 0.102431, 0.0989583 )
+texture = ExtResource( 3 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 7.0
+margin_top = 103.0
+margin_right = 228.0
+margin_bottom = 122.0
+rect_pivot_offset = Vector2( 204, 10 )
+custom_fonts/font = SubResource( 1 )
+text = "...siga a estrada de terra 
+até a central de reciclagem"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 132.0
+margin_top = 134.0
+margin_right = 353.0
+margin_bottom = 164.0
+rect_scale = Vector2( 1, 0.98668 )
+rect_pivot_offset = Vector2( 204, 10 )
+custom_fonts/font = SubResource( 1 )
+text = "...lá, o seu objetivo será
+separar os lixos da
+maneira correta"

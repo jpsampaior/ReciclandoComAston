@@ -1,0 +1,58 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://scripts/map/player.gd" type="Script" id=1]
+[ext_resource path="res://assets/Mapa Principal/atlas/idle_1.tres" type="Texture" id=2]
+[ext_resource path="res://assets/Mapa Principal/atlas/walk_1.tres" type="Texture" id=3]
+[ext_resource path="res://assets/Mapa Principal/atlas/idle_5.tres" type="Texture" id=4]
+[ext_resource path="res://assets/Mapa Principal/atlas/idle_0.tres" type="Texture" id=5]
+[ext_resource path="res://assets/Mapa Principal/atlas/idle_3.tres" type="Texture" id=6]
+[ext_resource path="res://assets/Mapa Principal/atlas/idle_2.tres" type="Texture" id=7]
+[ext_resource path="res://assets/Mapa Principal/atlas/walk_3.tres" type="Texture" id=8]
+[ext_resource path="res://assets/Mapa Principal/atlas/idle_4.tres" type="Texture" id=9]
+[ext_resource path="res://assets/Mapa Principal/atlas/walk_0.tres" type="Texture" id=10]
+[ext_resource path="res://assets/Mapa Principal/atlas/walk_5.tres" type="Texture" id=11]
+[ext_resource path="res://assets/Mapa Principal/atlas/walk_2.tres" type="Texture" id=12]
+[ext_resource path="res://assets/Mapa Principal/atlas/walk_4.tres" type="Texture" id=13]
+[ext_resource path="res://assets/Mapa Principal/portalMusic.mp3" type="AudioStream" id=14]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 3 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 6, 3.875 )
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 1 )
+speed = 100
+
+[node name="PlayerAnimation" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 9 )
+frames = SubResource( 1 )
+animation = "idle"
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 15.5 )
+shape = SubResource( 2 )
+
+[node name="Camera" type="Camera2D" parent="."]
+visible = false
+position = Vector2( -0.5, 11 )
+current = true
+limit_left = -55
+limit_top = 0
+limit_right = 935
+limit_bottom = 879
+
+[node name="PortalMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 14 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/themeMusic2.mp3-a0285ad92e5cbdddea0b33dbca2b2cc7.mp3str"
+
+[deps]
+
+source_file="res://assets/Desafio/themeMusic2.mp3"
+dest_files=[ "res://.import/themeMusic2.mp3-a0285ad92e5cbdddea0b33dbca2b2cc7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
